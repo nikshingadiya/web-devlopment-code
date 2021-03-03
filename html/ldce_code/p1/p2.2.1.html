@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+   #form {
+    background-color:rgb(230, 218, 179);
+    height: 560px;
+    width: 580px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    padding: 0px;
+    padding-bottom: 0px;
+    box-shadow: 12px 12px 7px grey;
+    text-align: center;
+    border: 3px solid;
+    
+}
+input[type="submit"] {
+    height: 30px;
+    width: 105px;
+    /* justify-content: flex-end; */
+    border: 1px solid #E5E5E5;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000;
+    margin-top: 28px;
+    float: right;
+    text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  
+  <form id="form" name="form" method="post" action="#">
+      <table  cellspacing=1 cellpadding=10px align=center >
+        <tr>
+          <td>Name</td>
+          <td>  <input style="height:25px;" type="text" name="name" placeholder="Enter name" /> </td>
+        </tr>
+        <tr>
+          <td>Address </td>
+          <td>  <textarea style="resize:none" rows = "3" cols = "22" name="address"></textarea> </td>
+        </tr>
+        <tr>
+          <td>Subject: </td>
+         <td> <div style="margin-left: 20px;" class="menu">
+          <input type="radio" id="physics" name="subject" value="physics" />
+          <label class="sel"for="male">Physics</label>
+          <input type="radio" id="maths" name="subject" value="maths" />
+          <label class="sel" for="female">Maths</label>
+          <input type="radio" id="other" name="subject" value="other" />
+          <label class="sel" for="other">Other</label>
+        </div> 
+      </td>
+        </tr> 
+        <tr>
+          <td>Author</td>
+          <td>
+            <div>
+            <select style="width: 180px; height: 25px;" name="author">
+              <option value="jorden hardy">Jorden hardy</option>
+    
+              <option value="george belly">George Belly</option>
+              <option value="clark kent">Clark Kent</option>
+              <option value="green halt ">Green Halt</option>
+            </select>
+          </div>
+        </td>
+        </tr>
+        <tr> 
+          <td>Comment</td>
+          <td> 
+            <div></div>
+            <textarea style="resize:none" rows = "3" cols = "22"  maxlength="20"  name="comment"></textarea>
+            <br/>
+            </div>
+          </td>
+        </tr>
+        <br/>
+      
+        
+                             
+      </table>
+      <input style="margin-right: 300px;" type="Submit" name="submit" value="Submit" />
+    </form>
+  
+</html>

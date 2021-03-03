@@ -1,0 +1,11 @@
+Age [20 24 22 27 23 21 28 25 32 30 31 26 18 19 33 29]
+Ease and convenient ['Neutral' 'Strongly agree' 'Agree' 'Strongly disagree' 'Disagree']
+Time saving ['Neutral' 'Strongly agree' 'Agree' 'Disagree' 'Strongly disagree']
+More restaurant choices ['Neutral' 'Strongly agree' 'Agree' 'Strongly disagree' 'Disagree']
+Easy Payment option ['Neutral' 'Strongly agree' 'Agree' 'Disagree' 'Strongly disagree']
+More Offers and Discount ['Neutral' 'Strongly agree' 'Agree' 'Disagree' 'Strongly disagree']
+Good Food quality ['Neutral' 'Disagree' 'Agree' 'Strongly agree' 'Strongly disagree']
+Good Tracking system ['Neutral' 'Agree' 'Strongly agree' 'Disagree' 'Strongly disagree']
+Unaffordable ['Neutral' 'Strongly agree' 'Agree' 'Disagree' 'Strongly disagree']
+Maximum wait time ['30 minutes' '45 minutes' '60 minutes' 'More than 60 minutes'
+ '15 minutes']

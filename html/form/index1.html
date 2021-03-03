@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title> consumers_prediction</title>
+      
+          <link rel="stylesheet" href="main.css"></link>
+         
+    </head>
+   
+<body>
+  <div class="container">
+  
+  <form id="form" action="/form/submit" method="post" onsubmit="saveDynamicDataToFile()">
+        <h1> Enter The Filed Value</h1>
+        <label for="unafford">Unaffordable</label>
+
+    <select id="unafford" name="Unaffordable">
+        <option disabled selected value> -- select an option -- </option>
+
+        <option value="Strongly agree">Strongly agree</option>
+        <option value="Agree">Agree</option>
+        <option value="Neutral">Neutral</option>
+        <option value="Disagree">Disagree</option>
+        <option value="Strongly disagree">Strongly disagree</option>
+
+    </select>
+  <br/>
+<br/>
+
+ 
+  <label for="delay">Delay of delivery person getting assigned</label>
+  <select id="delay" name="Delay of delivery person getting assigned">
+    <option disabled selected value> -- select an option -- </option>
+
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+  </select>
+<br/>
+<br/>
+
+<label for="long">Long delivery time</label>
+
+  <select id="long" name="Long delivery time">
+    <option disabled selected value> -- select an option -- </option>
+
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+
+  </select>
+<br/>
+<br/>
+
+<label for="wrng_order">Wrong order delivered</label>
+
+  <select id="wrng_order" name="Wrong order delivered">
+    <option disabled selected value> -- select an option -- </option>
+
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+  </select>
+<br/>
+<br/>
+
+<label for="availbility">Unavailability</label>
+
+  <select id="availbility" name="Unavailability">
+    <option disabled selected value> -- select an option -- </option>
+
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+
+  </select>
+<br/>
+<br/>
+
+<label for="ease">Ease and convenient</label>
+
+  <select id="ease" name="Ease and convenient">
+    <option disabled selected value> -- select an option -- </option>
+
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+
+  </select>
+<br/>
+<br/>
+
+<label for="late_del">Late Delivery</label>
+  
+  <select id="late_del" name="Late Delivery">
+    <option disabled selected value> -- select an option -- </option>
+    
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+
+  </select>
+<br/>
+<br/>
+
+<label for="miss_item">Missing item</label>
+  
+  <select id="miss_item" name="Missing item">
+    <option disabled selected value> -- select an option -- </option>
+    
+    <option value="Strongly agree">Strongly agree</option>
+    <option value="Agree">Agree</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Disagree">Disagree</option>
+    <option value="Strongly disagree">Strongly disagree</option>
+
+  </select>
+<br/>
+<br/>
+
+<label for="occ">Occupation</label>
+
+  <select id="occ" name="Occupation">
+    <option disabled selected value> -- select an option -- </option>
+    
+    <option value="'Student">Student</option>
+    <option value="Employee">Employee</option>
+    <option value="Self Employeed">Self Employeed</option>
+    <option value="House wife">House wife</option>
+  </select>
+
+<br/>
+<br/>
+  <input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+<script>
+
+  function saveDynamicDataToFile(){
+  
+      var userInput = document.getElementById("form").innerText;
+      saveAs(userInput, "dynamic.txt");
+  }
+  
+  </script>
