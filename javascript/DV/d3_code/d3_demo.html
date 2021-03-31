@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>D3_Demo</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+  </head>
+  <body>
+    <p>Hello world</p>
+    <script>
+      // d3.select("p").text("nikhil");
+      // d3.select("body").text("dfhb");
+      var width=500;
+      var height=500;
+      
+      
+      var dataval=[20,30,40,60,70];
+      var widthscale=d3.scaleLinear().domain([0,80]).range([0,width]);
+      
+      var axis=d3.axisBottom()
+    .scale(widthscale);
+
+      var color=d3.scaleLinear().domain([0,80]).range(["yellow","blue"]);
+
+      var canvas = d3
+        .select("body")
+        .append("svg")
+        .attr("width", width)
+        .style("border","1px solid blue")
+        .attr("height", height)
+        .append("g")
+        .attr("transform","translate(50,50)")
+        
+      canvas.append("g")
+            .attr("transform","translate(0,400)")
+            .call(axis);
+      
+      
+      // var circle = canvas
+
+      //   .append("circle")
+      //   .attr("cx", 250)
+      //   .attr("cy", 250)
+      //   .attr("r", 40)
+      //   .attr("fill", "blue")
+      //   .style("filter", "drop-shadow( 5px 6px 4px rgba(0, 0, 0, .7))");
+
+      // var rect = canvas
+      //   .append("rect")
+      //   .attr("x", 150)
+      //   .attr("y", 50)
+      //   .attr("width", 200)
+      //   .attr("height", 30)
+      //   .attr("fill", "blue")
+      //   .style("filter", "drop-shadow( 5px 6px 4px rgba(0, 0, 0, .7))");
+      
+      var bar1= canvas.selectAll("rect")
+                 .data(dataval)
+                 .enter()
+    
+      
+      var bar= canvas.selectAll("rect")
+                 .data(dataval)
+                 .enter()
+                    .append("rect")
+                    .attr("y",50)
+                    .attr("width",function(d) { return widthscale(d);})
+                    .attr("height",50)
+
+                    .attr("y",function(d,i){ return i*80})
+                    .attr("fill",function(d) {return color(d)});
+
+    
+    </script>
+  </body>
+</html>

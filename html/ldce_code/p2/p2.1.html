@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<input type="number" id="myNumber" >
+<button onclick="myFunction()">odd/even</button>
+
+
+<p id="result"></p>
+
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x= document.getElementById("myNumber").value;
+  if(x%2==0)
+  {
+        document.getElementById("result").innerHTML="Given Number is Even";
+  }
+  else
+  {
+    document.getElementById("result").innerHTML="Given Number is Odd";
+  }
+}
+</script>
+
+</body>
+</html>

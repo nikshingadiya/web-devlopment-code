@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var temp="",lastOp="";
+function operation(vFirst) {
+var v = vFirst.innerHTML;
+var i = document.getElementById('input');
+var o = document.getElementById('output');
+if(v=="+" || v=="-" || v=="*" || v=="/"){
+temp = i.innerHTML;
+lastOp = v;
+i.innerHTML = "";
+}
+else if(v=="="){
+if(lastOp=="+"){
+var a = parseInt(temp) + parseInt(i.innerHTML);
+o.innerHTML = temp + " " +lastOp +" "+i.innerHTML+ " = "+ a;
+}
+else if(lastOp=="-"){
+var a = parseInt(temp) - parseInt(i.innerHTML);
+o.innerHTML = temp + " " +lastOp +" "+i.innerHTML+ " = "+ a;
+}
+else if(lastOp=="*"){
+var a = parseInt(temp) * parseInt(i.innerHTML);
+o.innerHTML = temp + " " +lastOp +" "+i.innerHTML+ " = "+ a;
+}
+else if(lastOp=="/"){
+var a = parseInt(temp) / parseInt(i.innerHTML);
+
+o.innerHTML = temp + " " +lastOp +" "+i.innerHTML+ " = "+ a;
+}
+}
+else{
+i.innerHTML = i.innerHTML + v;
+}
+}
+</script>
+<style type="text/css">
+tr{
+height: 50px;
+}
+td{
+width: 50px;
+}
+</style>
+</head>
+<body>
+<table border="1" align="center" style="text-align: center;">
+<tr>
+<td colspan="4" id="output"></td>
+</tr>
+<tr>
+<td colspan="4" id="input"></td>
+</tr>
+<tr>
+<td onclick="operation(this)">7</td>
+<td onclick="operation(this)">8</td>
+<td onclick="operation(this)">9</td>
+<td onclick="operation(this)">*</td>
+</tr>
+<tr>
+<td onclick="operation(this)">4</td>
+<td onclick="operation(this)">5</td>
+<td onclick="operation(this)">6</td>
+<td onclick="operation(this)">-</td>
+</tr>
+<tr>
+<td onclick="operation(this)">1</td>
+<td onclick="operation(this)">2</td>
+<td onclick="operation(this)">3</td>
+<td onclick="operation(this)">/</td>
+</tr>
+<tr>
+<td onclick="operation(this)">0</td>
+<td onclick="operation(this)">.</td>
+<td onclick="operation(this)">+</td>
+<td onclick="operation(this)">=</td>
+</tr>
+</table>
+</body>
+</html>

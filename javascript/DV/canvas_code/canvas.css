@@ -1,0 +1,84 @@
+#mycanvas
+{
+    border: 5px solid blue ;
+    padding: 0;
+    /* margin: auto; */
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#mycanvas1
+{
+    border: 5px solid blue ;
+    padding: 0;
+    /* margin: auto; */
+    margin-left: 300px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#mycanvas2
+{
+     border: 5px solid blue ;
+    padding: 0;
+    /* margin: auto; */
+    margin-left: 550px;
+    /* display: block; */
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+}
+#panda
+{
+    margin-top: 300px;
+    
+}
+
+#mycanvas3
+{
+    border: 5px solid blue ;
+    padding: 0;
+    /* margin: auto; */
+    margin-left: 300px;
+    margin-top: 300px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#mycanvas4
+{
+    border: 5px solid blue ;
+    padding: 0;
+    /* margin: auto; */
+    margin-left: 900px;
+    margin-top: 0px;
+    display: block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

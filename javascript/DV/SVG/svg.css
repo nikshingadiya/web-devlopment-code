@@ -1,0 +1,36 @@
+
+/* svg
+{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+
+} */
+.container
+{
+    background-repeat: no-repeat;
+    background-color: #eee;
+    border: 1px solid gray;
+    width: 400px;
+    height :400px;
+    align-items: baseline;
+
+}
+img
+{
+    width: 200px;
+    height :200px;
+    vertical-align: middle;
+}
+.container svg
+{
+
+
+    width: 200px;
+    height :200px;
+    vertical-align: middle;
+    border: 1px solid blue;
+    padding-top: 0px;
+    margin-top: 0px;
+}

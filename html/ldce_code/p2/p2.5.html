@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript">
+var month = parseInt(prompt("enter your birth month (1-12)","") - 1);
+var day = parseInt(prompt("enter your birth day(1-31)",
+""));
+var birthday = new Date();
+var currentdate = new Date();
+var one_day=1000*60*60*24;
+document.write("Current date : "+currentdate +'<br>');
+birthday.setDate(day);
+birthday.setMonth(month);
+document.write("Birthday : "+birthday +'<br>');
+var theDate = birthday - currentdate;
+theDate = (theDate / one_day);
+
+document.write("Days left are " + theDate.toFixed(0) + "in your birthday ");
+</script>
+</head>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+var date = new Date();
+var hour = date.getHours();
+var minute = date.getMinutes();
+var second = date.getSeconds();
+if (hour < 12) {
+welcome = "Good morning";
+}
+else if (hour < 17) {
+welcome = "Good afternoon";
+}
+else {
+welcome = "Good evening";
+}
+document.write("<h2>" + "<font color='red'>" + welcome +
+"</font>" + " welcome to our website");
+
+document.write("<br>" + hour + ":" + minute + ":" +
+second);
+</script>
+</head>
+<body>
+</body>
+</html>

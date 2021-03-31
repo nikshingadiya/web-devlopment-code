@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>D3_Demo</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 2px black solid;
+        font: 12px sans-serif;
+      }
+
+      td {
+        border: 1px black solid;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+        header=['name','diameter','weight','red','green','blue']
+        // d3.select("body")
+          
+        //   .append("table");
+
+        // d3.select('table')
+        //   .append('tr');
+        
+        // d3.select('tr')
+        // .data(header )
+        //   .append('th');
+           
+        // d3.selectAll('th')
+        // .data(function(d) { return d; }).enter()
+          
+        //   .append('th').text( function(d){ return d;});
+          
+
+        var container = d3.select("body")
+                    .append("table").append('tr');
+
+        
+        
+            container.selectAll('th')
+                 data(header)
+                   .enter()
+                   .append('th').text(function(d){return d;});
+
+
+        //   d3.csv("citrus.csv", function(data) {
+                
+
+               
+
+        //             .selectAll("td")
+        //                 .data(function(d) { return d; }).enter()
+        //                 .append("td")
+        //                 .text(function(d) { return d; });
+        //     });
+
+    //   d3.csv("citrus.csv", function (data) {
+    //     console.log(data["name"], data["green"], data["diameter"]);
+        
+
+    //     d3.select("tr")
+    //       .append("td").text(data['name']);
+          
+
+
+       
+    //   });
+    </script>
+  </body>
+  
+</html>

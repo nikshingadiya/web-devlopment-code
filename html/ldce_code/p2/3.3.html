@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+function palindrome() {
+        var str = document.getElementById("str").value;
+        var ans = document.getElementById("result");
+        var i = 0;
+        var j = str.length - 1;
+        while(i < j) {
+        if(str[i] == str[j]) {
+        i++;
+        j--;
+        }
+        else {
+        ans.innerHTML="Not Palindrome ";
+        return;
+        }
+        }
+        ans.innerHTML=" Palindrome ";
+        return;
+        }
+</script>
+Enter String
+<input type="text" name="str" id="str">
+<input type="button" name="check" value="check"
+onclick="palindrome()">
+</br>
+<h2 id="result"></h2>
+</body>
+</html>

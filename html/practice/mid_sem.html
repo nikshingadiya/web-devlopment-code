@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Function Sequence</h2>
+
+<p>JavaScript functions are executed in the sequence they are called.</p>
+
+<p  id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = "Nikhil";
+}
+
+function myFirst() {
+  myDisplayer("Hello Nikhil");
+}
+
+function mySecond() {
+  myDisplayer("Goodbye");
+}
+
+myFirst();
+mySecond();
+</script>
+
+</body>
+</html>

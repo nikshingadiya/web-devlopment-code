@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Nikhil Shigadiya</p>
+
+<h1 id="mouse">Hello World!</h1>
+
+<script>
+document.getElementById("mouse").onmouseover = function() {
+    mouseOver()};
+document.getElementById("mouse").onmouseout = function() {
+    mouseOut()
+};
+
+function mouseOver() {
+  document.getElementById("mouse").style.color = "red";
+};
+
+function mouseOut() {
+  document.getElementById("mouse").style.color = "black";
+};
+</script>
+
+</body>
+</html>
