@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>Google Charts Tutorial</title>
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto">
+      </div>
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Employees');
+            data.addColumn('number', 'Percentage');
+            data.addRows([
+               ['Management', 25.0],
+               ['Workers', 25.5],
+               ['Web Dev', 15.5],
+               ['Android Dev', 22.5],
+               ['AI',12.5],
+               ['Designer', 18.5]
+            ]);
+               
+            // Set chart options
+            var options = {
+               'title':'Employees Proportion In The Company',
+               'width':650,
+               'height':600,
+               pieHole: 0.3
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+   </body>
+</html>

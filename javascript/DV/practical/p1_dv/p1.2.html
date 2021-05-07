@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <style>
+      #mycanvas1 {
+        border: 5px solid blue;
+        padding: 0;
+        /* margin: auto; */
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      #mycanvas2 {
+        border: 5px solid rgb(59, 165, 45);
+        padding: 0;
+        margin-left: 400px;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      #mycanvas3 {
+        border: 5px solid rgb(59, 165, 45);
+        padding: 0;
+        margin-left: 800px;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      #mycanvas4 {
+        border: 5px solid rgb(59, 165, 45);
+        padding: 0;
+        margin-left: 0;
+        margin-top: 250px;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="mycanvas1"></canvas>
+    <canvas id="mycanvas2"></canvas>
+    <canvas id="mycanvas3"></canvas>
+    <canvas id="mycanvas4"></canvas>
+  </body>
+</html>
+<script>
+  window.onload = function draw() {
+    var canvas = document.getElementById("mycanvas1");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+
+      // emoji1
+      ctx.beginPath();
+      ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+      ctx.moveTo(110, 75);
+      ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+      ctx.moveTo(65, 65);
+      ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+      ctx.moveTo(95, 65);
+      ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+      ctx.stroke();
+
+      //emoji2
+      var canvas = document.getElementById("mycanvas2");
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+      ctx.moveTo(110, 75);
+      ctx.arc(75, 75, 35, 0, Math.PI, true); // Mouth (clockwise)
+      ctx.moveTo(65, 65);
+      ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+      ctx.moveTo(95, 65);
+      ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+
+      ctx.stroke();
+
+      // emoji3
+      var canvas = document.getElementById("mycanvas3");
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(80, 80, 15, 0, Math.PI * 2, true);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.moveTo(165, 80);
+      ctx.arc(150, 80, 15, 0, Math.PI * 2, true);
+      ctx.moveTo(170, 80);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.arc(100, 80, 70, 0, Math.PI * 2, true);
+      ctx.fillStyle = "rgba(153, 50, 204, 0.5)";
+      ctx.fill();
+
+      ctx.moveTo(150, 120);
+      ctx.arc(115, 120, 35, 0, Math.PI, true);
+
+      ctx.stroke();
+
+      //curve
+      var canvas = document.getElementById("mycanvas4");
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(50, 20);
+      ctx.quadraticCurveTo(230, 120, 50, 100);
+      ctx.stroke();
+
+      ctx.fillStyle = "blue";
+      ctx.beginPath();
+      ctx.arc(50, 20, 5, 0, 2 * Math.PI); // Start point
+      ctx.arc(50, 100, 5, 0, 2 * Math.PI); // End point
+      ctx.fill();
+
+      //   Control point
+      ctx.fillStyle = "red";
+      ctx.beginPath();
+      ctx.arc(230, 40, 10, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.strokeText("This is Arc ", 20, 60);
+      ctx.stroke();
+    }
+  };
+</script>

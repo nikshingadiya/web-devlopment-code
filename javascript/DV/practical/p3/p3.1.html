@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        var theChart = document.getElementById("bar_chart");
+
+        var theContext = theChart.getContext("2d");
+        color = ["blue", "green", "brown", "yellow"];
+        var i = 0;
+        var x = 25;
+        var y = 70;
+        var widthx = 120;
+        var widthy = 80;
+        for (i = 0; i < color.length; i++) {
+          theContext.fillStyle = color[i];
+          theContext.fillRect(x, y + i * 120, widthx * i + 5, widthy);
+          theContext.fillStyle = "grey";
+
+          theContext.font = "15px Arial";
+          theContext.strokeText(
+            widthx * i + 5,
+            widthx * i + 30,
+            widthy / 2 + widthy + i * 120
+          );
+          theContext.stroke();
+        }
+
+        theContext.stroke();
+      };
+    </script>
+    <style>
+      #bar_chart {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="bar_chart" width="600" height="600"></canvas>
+  </body>
+</html>

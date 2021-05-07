@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Bar Chart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+</head>
+
+<body>
+    <h2 style="margin-left:25px;">Bar Chart of Employees Data Using data.json File</h2>
+    <h4 style="margin-left:25px;">(For employees and their age.)</h4>
+    <canvas id="barPlot" width="600px" height="300px"></canvas>
+
+    <script type="text/javascript">
+        $.getJSON("data.json", function(data) {
+            var ctx = document.getElementById("barPlot").getContext("2d")
+            var grd = ctx.createLinearGradient(100, 0, 200, 0);
+            grd.addColorStop(0, "rgb(247, 104, 47)");
+            grd.addColorStop(1, "blue");
+            ctx.fillStyle = grd;
+            ctx.font = "15px Times New Roman"
+            ctx.lineWidth = "1.5"
+            ctx.strokeStyle = "black"
+
+            var barHeight = 25
+            var spaceBetweenBars = 11
+            var scaleFactor = 8
+
+            var empNames = [];
+            var empAge = [];
+
+            $.each(data.company.employees, function(k, v) {
+                empNames.push(v.empName);
+                empAge.push(v.empAge);
+            });
+
+            for (var i = 1; i <= empAge.length; i++) {
+
+                ctx.rect(100, (barHeight + spaceBetweenBars) * i, empAge[i - 1] * scaleFactor, barHeight)
+                ctx.fillText(empNames[i - 1], 30, (barHeight + spaceBetweenBars) * i + barHeight / 2)
+                ctx.fillText(empAge[i - 1].toString(), empAge[i - 1] * scaleFactor + 115, (barHeight + spaceBetweenBars) * i + barHeight / 2 + 2)
+
+            }
+            ctx.fill()
+            ctx.stroke()
+        });
+    </script>
+
+</body>
+
+</html>

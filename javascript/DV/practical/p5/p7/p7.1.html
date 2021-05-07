@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Read XML File</title>
+    <style>
+        tr,
+        td,
+        th {
+            padding: 15px;
+        }
+        table {
+            border-collapse: collapse;
+            border: 3px solid black;
+        }
+        caption {
+            padding: 10px;
+        }
+        
+        td {
+            background: gainsboro;
+        }
+        
+        th {
+            background: yellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+</head>
+<body>
+    <table id="dataTable" border="1" style="text-align: center;">
+        <caption><strong>Data From XML File</strong></caption>
+        <tr>
+            <th>Book Name</th>
+            <th>Book Author</th>
+            <th>Year</th>
+            <th>Book Price</th>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: "data.xml",
+            dataType: "xml",
+            success: function(xml) {
+                console.log(xml);
+                var count = 0;
+                $(xml).find('book').each(function() {
+                    count += 1;
+                    var bookTitle = $(this).find('title').text();
+                    var bookAuthor = $(this).find('author').text();
+                    var bookYear = $(this).find('year').text();
+                    var bookPrice = $(this).find('price').text();
+                    $('#dataTable').append('<tr><td>' + bookTitle + '</td><td>' + bookAuthor + '</td><td>' + bookYear + '</td><td>$' + bookPrice + '</td></tr>');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

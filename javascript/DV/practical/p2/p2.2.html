@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: center;
+
+        border: 2px solid black;
+      }
+      svg {
+        border: 2px solid rgb(16, 31, 170);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <th>
+        <tr>
+          <td>Shapes Name</td>
+          <td>Shapes</td>
+        </tr>
+      </th>
+      <tr>
+        <td>LinearGradient</td>
+        <td>
+          <svg height="300" width="300">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop
+                  offset="0%"
+                  style="stop-color: rgb(255, 187, 0); stop-opacity: 1"
+                />
+                <stop
+                  offset="50%"
+                  style="stop-color: rgb(0, 89, 255); stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <ellipse cx="150" cy="100" rx="120" ry="70" fill="url(#grad1)" />
+          </svg>
+        </td>
+      </tr>
+
+      <tr>
+        <td>RadialGradient</td>
+        <td>
+          <svg height="250" width="300">
+            <defs>
+              <radialGradient
+                id="grad2"
+                cx="50%"
+                cy="50%"
+                r="50%"
+                fx="50%"
+                fy="50%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: rgb(88, 168, 35); stop-opacity: 0"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: rgb(38, 0, 255); stop-opacity: 1"
+                />
+              </radialGradient>
+            </defs>
+            <ellipse cx="150" cy="100" rx="120" ry="70" fill="url(#grad2)" />
+          </svg>
+        </td>
+      </tr>
+
+      <tr>
+        <td>QuadraticCurve</td>
+        <td>
+          <svg height="300" width="300">
+            <path
+              fill="none"
+              stroke="#333333"
+              stroke-width="3"
+              d="M20,50 Q100,5 200,100"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>Triangle</td>
+        <td>
+          <svg height="350" width="450">
+            <path
+              d="M250 10 L100 200 L400 200 Z"
+              stroke="blue"
+              stroke-width="3"
+              fill="red"
+            />
+          </svg>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

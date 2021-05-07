@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>contains demo</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <div id="div"></div>
+
+    <div id="p1"></div>
+
+    <script>
+      window.onload = function () {
+        jQuery.get("fruit.csv", function (data) {
+          //process text file line by line
+          var textByLine = data.split("\n");
+
+          var i = 0;
+          table = '<table style="border: 1px solid black">';
+          for (i = 0; i < textByLine.length - 1; i++) {
+            m = textByLine[i].split(",");
+
+            if (i == 0) {
+              table = table + '<tr style="border: 1px solid black">';
+              for (var j = 0; j < m.length; j++) {
+                table =
+                  table +
+                  '<th style=" border: 1px solid black ">' +
+                  m[j] +
+                  "</th>\n";
+                console.log(m[j]);
+              }
+
+              table = table + "</tr>";
+            } else {
+              table = table + "<tr>";
+              for (var j = 0; j < m.length; j++) {
+                table =
+                  table +
+                  ' <td style=" border: 1px solid black "> ' +
+                  m[j] +
+                  " </td>\n ";
+              }
+
+              table = table + "</tr>";
+            }
+            document.getElementById("p1").innerHTML = table + " </table>";
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

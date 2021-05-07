@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     
+      ['Mon', 20.4, 28.8, 32.6, 44.9],
+      ['Tue', 32.9, 38.3, 45.3, 67.5],
+      ['Wed', 56.3, 58.9, 56.4, 70],
+      ['Thu', 32.9, 38.3, 45.3, 67.5],
+      ['Fri', 20.4, 28.8, 32.6, 44.9]
+      // Treat first row as data as well.
+    ], true);
+
+    var options = {
+      legend:'none',
+      vAxis:{
+         title:"share_distribution"
+
+      },
+      hAxis:{
+        title:"Days"
+      }
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+  }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 600px;"></div>
+  </body>
+</html>

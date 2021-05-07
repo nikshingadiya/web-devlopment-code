@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bar Chart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  </head>
+
+  <body>
+    <h2 style="margin-left: 25px">
+      Bar Chart of Books Data Using data.xml File
+    </h2>
+    <h4 style="margin-left: 25px">(For books and their price in $.)</h4>
+    <canvas id="barPlot" width="800px" height="500px"></canvas>
+
+    <script type="text/javascript">
+      $.ajax({
+        type: "GET",
+        url: "data.xml",
+        dataType: "xml",
+        success: function (xml) {
+          console.log(xml);
+          var count = 0;
+          $(xml)
+            .find("book")
+            .each(function () {
+              count += 1;
+              var bookTitle = $(this).find("title").text();
+              var bookAuthor = $(this).find("author").text();
+              var bookYear = $(this).find("year").text();
+              var bookPrice = $(this).find("price").text();
+              $("#dataTable").append(
+                "<tr><td>" +
+                  bookTitle +
+                  "</td><td>" +
+                  bookAuthor +
+                  "</td><td>" +
+                  bookYear +
+                  "</td><td>$" +
+                  bookPrice +
+                  "</td></tr>"
+              );
+            });
+
+          var ctx = document.getElementById("barPlot").getContext("2d");
+          ctx.fillStyle = "purple";
+          ctx.font = "15px Times New Roman";
+          ctx.lineWidth = "1.5";
+          ctx.strokeStyle = "black";
+          var barHeight = 25;
+          var spaceBetweenBars = 11;
+          var scaleFactor = 8;
+          var bookTitles = [];
+          var bookPrices = [];
+          $(xml)
+            .find("book")
+            .each(function () {
+              bookTitles.push($(this).find("title").text());
+              bookPrices.push(Number($(this).find("price").text()));
+            });
+          for (var i = 1; i <= bookPrices.length; i++) {
+            ctx.rect(
+              200,
+              (barHeight + spaceBetweenBars) * i,
+              bookPrices[i - 1] * scaleFactor,
+              barHeight
+            );
+            ctx.fillText(
+              bookTitles[i - 1],
+              30,
+              (barHeight + spaceBetweenBars) * i + barHeight / 2
+            );
+            ctx.fillText(
+              bookPrices[i - 1].toString(),
+              bookPrices[i - 1] * scaleFactor + 215,
+              (barHeight + spaceBetweenBars) * i + barHeight / 2 + 2
+            );
+          }
+          ctx.fill();
+          ctx.stroke();
+        },
+      });
+    </script>
+  </body>
+</html>
