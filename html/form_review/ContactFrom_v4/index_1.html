@@ -4,30 +4,26 @@
 <head>
 	<title>Contact V4</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <script>
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+	<script>
 		if (screen.width > 590) {
 			var mvp = document.getElementById('viewport');
 			mvp.setAttribute('content','width=1080');
 			
 
 		}
-		</script> -->
+		</script>
+		<script>
+			function myprobability()
+				{
+					document.getElementById("probability").innerHTML=0.5234;
+					document.getElementById("b1").style.backgroundColor = "#ac0aff";
+				}
+			</script>
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	
 	<!--===============================================================================================-->
 
 	<!--===============================================================================================-->
@@ -39,150 +35,43 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" action="../../form/submit.html"> <span class="contact100-form-title">
-				    Feedback For Online Food Order
+			<form class="contact100-form validate-form" action=""> <span class="contact100-form-title">
+				    Next Time Customer Buy Or Not
 				</span>
-				<div class="wrap-input100 validate-input">	<span class="label-input100">Age</span>
-					<input class="input100" type="number" style="color: #ff9d09bb;" id="age" name="Age" min="15" max="45" placeholder="Enter your age" required>	<span class="focus-input100"></span>
-				</div>
-				<div class="wrap-input100 input100-select"> <span class="label-input100">Ease and convenient</span>
-					<div>
-						<select class="selection-2" id="ease" name="Ease and convenient" required>
-							<option class ="disable" disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				<div class="wrap-input100 validate-input">	<span class="label-input100">Age 
+					<span class="result_feedback">More than 60 minutes</span>
+					
+				</div> <span class="focus-input100"></span> 
+					
+			
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Time saving</span>
-					<div>
-						<select class="selection-2" id="time" name="Time saving" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 
 				<div class="wrap-input100 input100-select"> <span class="label-input100">More restaurant choices</span>
-					<div>
-						<select class="selection-2" id="choice" name="More restaurant choices" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 	
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Easy Payment option</span>
-					<div>
-						<select class="selection-2" id="payment" name="Easy Payment option" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 	
 				<div class="wrap-input100 input100-select"> <span class="label-input100">More Offers and Discount</span>
-					<div>
-						<select class="selection-2" id="discount" name="More Offers and Discount" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Good Food quality</span>
-					<div>
-						<select class="selection-2" id="food" name="Good Food quality" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Good Tracking system</span>
-					<div>
-						<select class="selection-2" id="tracking" name="Good Tracking system" required>
-							<option class ="disable" disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Unaffordable</span>
-					<div>
-						<select class="selection-2" id="unaffordable" name="Unaffordable" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
+				</div> <span class="focus-input100"></span> 
 				<div class="wrap-input100 input100-select"> <span class="label-input100">Maximum wait time</span>
-					<div>
-						<select class="selection-2" id="wait_time" name="Maximum wait time" required>
-							<option disabled selected value>Select an option</option>
-							<option value="Strongly agree">Strongly agree</option>
-							<option value="Agree">Agree</option>
-							<option value="Neutral">Neutral</option>
-							<option value="Disagree">Disagree</option>
-							<option value="Strongly Disagree">Strongly disagree</option>
-						</select>
-					</div> <span class="focus-input100"></span> 
-				</div>
-				<div class="container-contact100-form-btn">
-					<div class="wrap-contact100-form-btn">
-						<div class="contact100-form-bgbtn"></div>
-						<button class="contact100-form-btn"> <span>
-								Submit
-								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-							</span> 
-						</button>
-					</div>
-				</div>
+				</div> <span class="focus-input100"></span> 
+			
+				  
 			</form>
+
+
+			<button class="button1"  id="b1" onclick="myprobability()">Probability 
+			</button>
+		   
+			<span id="probability" id="b1" class="font-big" >Nikhil  </span>
 		</div>
 	</div>
-	<div id="dropDownSelect1"></div>
-	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<!-- <script src="vendor/animsition/js/animsition.min.js"></script> -->
-	<!--===============================================================================================-->
-	<!-- <script src="vendor/bootstrap/js/popper.js"></script> -->
-	<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
-	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
 	
-	<script>
-		$(".selection-2").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-	</script>
 	<!--===============================================================================================-->
 
 </body>

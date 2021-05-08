@@ -22,14 +22,18 @@
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+
+  src : url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  
 }
 
 
 
 
 /*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
+[ RESTYLE TAG ] 
+
+*/
 
 * {
 	margin: 0px; 
@@ -194,7 +198,7 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #d9d9d9;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
   margin-bottom: 27px;
 }
 
@@ -553,6 +557,7 @@ textarea.input100 {
   line-height: 1.2;
 }
 
+
 .select2-search--dropdown .select2-search__field {
   border: 1px solid #aaa;
   outline: none;
@@ -612,20 +617,83 @@ and (orientation : portrait) {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
-}
+
 
 /* iPhone 4 ----------- */
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
+}
+
+
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+
+}
+
+
+
+.button1{
+  background-color: #8e63a365; /* Green */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2px 2px;
+  cursor: pointer; 
+
+
+  
+}
+.button1:hover
+{
+  background-color: #ac0aff; /* Green */
+ 
+}
+
+.font-big
+
+{
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 30%;
+  float: right;
+  margin-left: 5%;
+  color: white;
+  
+  font-size: 20px;
+  font-weight: bolder;
+  border-color: rgb(8, 51, 68);
+  background-color: #992ad2d9;
+  border-radius: 12px;
+}
+.result_feedback
+{
+  margin-top:0px;
+  /* display: inline-block; change the display type           */
+  /* margin: 10px 0;  */
+  /* line-height: 1.5; */
+  float: right;
+  margin-left: 0%;
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  font-weight:bolder;
+  color: #ff9d09fb;
+  line-height: 1.2;
 }
